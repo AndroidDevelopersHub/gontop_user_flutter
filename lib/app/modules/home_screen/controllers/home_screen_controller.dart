@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 class HomeScreenController extends GetxController {
-  //TODO: Implement HomeScreenController
+
 
   final count = 0.obs;
   @override
@@ -17,4 +17,11 @@ class HomeScreenController extends GetxController {
   @override
   void onClose() {}
   void increment() => count.value++;
+
+
+  // void callApi()async {
+  //   final result = homeRepository?.getAll();
+  //   print(result);
+  // }
+  
 }
