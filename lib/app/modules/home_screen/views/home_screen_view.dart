@@ -13,9 +13,12 @@ class HomeScreenView extends GetView<HomeScreenController> {
         centerTitle: true,
       ),
       body: Center(
-        child: Text(
-          'HomeScreenView is working',
-          style: TextStyle(fontSize: 20),
+        child: InkWell(
+          onTap: ()=> controller.callApi(),
+          child: Text(
+            'HomeScreenView is working',
+            style: TextStyle(fontSize: 20),
+          ),
         ),
       ),
     );

@@ -5,7 +5,6 @@ import 'package:gontop_user/app/data/local/local_storage.dart';
 
 
 const API_BASE_URL = "https://jsonplaceholder.typicode.com/";
-// const API_STORAGE_URL = "https://cribfinder.parallaxlogic.dev/storage/";
 
 enum Method { POST, GET, PUT, DELETE, PATCH }
 
@@ -21,6 +20,9 @@ class ApiClient extends GetxService {
       };
 
   Future<ApiClient> init() async {
+
+    print("api client service init called");
+
     _dio = Dio(BaseOptions(
       baseUrl: API_BASE_URL,
       headers: header(),

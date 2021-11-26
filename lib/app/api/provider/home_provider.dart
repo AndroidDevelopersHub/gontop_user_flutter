@@ -4,7 +4,7 @@ import 'package:gontop_user/app/api/client/api_client.dart';
 import 'package:gontop_user/app/utils/helper/view_helper.dart';
 
 
-class HomeProvider {
+class HomeProvider extends GetxService{
   ApiClient apiClient = Get.find();
 
   getAllPost() async {
