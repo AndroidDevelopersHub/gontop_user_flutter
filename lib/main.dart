@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: createMaterialColor(CustomColors.KPrimaryBlueColor),
+        primarySwatch: createMaterialColor(CustomColors.KPrimaryRedColor),
         textTheme: GoogleFonts.latoTextTheme(),
       ),
       title: "Swap",

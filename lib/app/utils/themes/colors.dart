@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomColors {
 
+
+
+  static const Color KPrimaryRedColor = Color(0xFFE21920);
   static const Color KPrimaryBlueColor = Color(0xFF00A4CF);
   static const Color KPrimaryYellowColor = Color(0xFFF0CE15);
   static const Color KPrimaryStatusBarColor = Color(0xFFFB8989);
@@ -11,6 +14,9 @@ class CustomColors {
   static const Color KBorderColor = Color(0xFFE0E0E0);
   static const Color KOrrangeColor = Color(0xFFE87C28);
   static const Color KBlackColor = Color(0xFF455A64);
+  static const Color KLiteBlackColor = Color(0xFF707070);
+  static const Color KDarkBlackColor = Color(0xFF2E353A);
+
 
 
   static const Color KAntiFlashBackground = Color(0xFFF0F0F0);

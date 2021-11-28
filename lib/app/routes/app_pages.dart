@@ -35,7 +35,7 @@ class AppPages {
   AppPages._();
 
   // static const INITIAL = Routes.HOME;
-  static const INITIAL = Routes.HOME_SCREEN;
+  static const INITIAL = Routes.LOGIN;
 
   static final routes = [
     GetPage(

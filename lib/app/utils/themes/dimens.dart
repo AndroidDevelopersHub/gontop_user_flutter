@@ -29,6 +29,18 @@ class Dimens {
   static const titleLargeTrippleExtra = 32.0;
 
 
+  // Text Size
+  static const subTitleSmall = 8.0;
+  static const subTitleMin = 10.0;
+  static const subTitleMinMid = 12.0;
+  static const subTitleMid = 14.0;
+  static const subTitle = 16.0;
+  static const subTitleLarge = 20.0;
+  static const subTitleLargeExtra = 24.0;
+  static const subTitleLargeDoubleExtra = 28.0;
+  static const subTitleLargeTrippleExtra = 32.0;
+
+
 // Button Size
   static const buttonSmall = 38.0;
   static const buttonminMid = 45.0;

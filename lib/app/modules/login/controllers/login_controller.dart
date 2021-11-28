@@ -1,11 +1,18 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginController extends GetxController {
-  //TODO: Implement LoginController
+class LoginController extends GetxController with SingleGetTickerProviderMixin{
 
-  final count = 0.obs;
+
+  int selectedIndex = 0;
+  TabController? tabController;
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  bool obscureText = true;
+
   @override
   void onInit() {
+    tabController = TabController(length: 2, vsync: this);
     super.onInit();
   }
 
@@ -16,5 +23,32 @@ class LoginController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
+
+  updateIndex(int index){
+    tabController?.index  = index;
+    update();
+  }
+
+  passwordVisibility() {
+    obscureText = !obscureText;
+    update();
+  }
+
+
+
+
+
+
+
+  onTabChange(int index) async {
+    selectedIndex = index;
+    update();
+  }
+
+  onloginClick() {}
+
+  onforgotPasswordClick() {}
+
+
 }
