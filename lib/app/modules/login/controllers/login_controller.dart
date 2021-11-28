@@ -8,6 +8,9 @@ class LoginController extends GetxController with SingleGetTickerProviderMixin{
   TabController? tabController;
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController numberController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
   bool obscureText = true;
 
   @override

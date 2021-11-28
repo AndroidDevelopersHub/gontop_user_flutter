@@ -141,11 +141,24 @@ class LoginView extends GetView<LoginController> {
                             SizedBox(
                               height: 15,
                             ),
+
                             CTextField(
-                              controller: controller.emailController,
-                              hintText: 'Email or Phone Number',
+                              controller: controller.usernameController,
+                              hintText: 'User Name',
                               textInputType: TextInputType.text,
                               prefixIcon: Icon(Icons.person),
+                            ),
+                            CTextField(
+                              controller: controller.emailController,
+                              hintText: 'Email Address',
+                              textInputType: TextInputType.emailAddress,
+                              prefixIcon: Icon(Icons.mail),
+                            ),
+                            CTextField(
+                              controller: controller.numberController,
+                              hintText: 'Phone Number',
+                              textInputType: TextInputType.number,
+                              prefixIcon: Icon(Icons.call),
                             ),
                             CTextField(
                               controller: controller.passwordController,
@@ -154,26 +167,20 @@ class LoginView extends GetView<LoginController> {
                               textInputType: TextInputType.text,
                               prefixIcon: Icon(Icons.lock),
                             ),
+                            CTextField(
+                              controller: controller.confirmPasswordController,
+                              obscureText: true,
+                              hintText: 'Confirm Password',
+                              textInputType: TextInputType.text,
+                              prefixIcon: Icon(Icons.lock),
+                            ),
                             SizedBox(height: 15),
                             CRoundedButton(
-                              text: 'LOG IN',
+                              text: 'SIGN UP',
                               onClick: () => controller.onloginClick(),
                             ),
                             SizedBox(height: 10),
-                            SizedBox(
-                              width: 300,
-                              child: InkWell(
-                                onTap: () => controller.onforgotPasswordClick(),
-                                child: Text(
-                                  "Forgot Password?",
-                                  textAlign: TextAlign.right,
-                                  style: GoogleFonts.lato(
-                                      fontSize: Dimens.titleMid,
-                                      color: CustomColors.KPrimaryRedColor,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                            ),
+
                             Spacer(),
 
                             Padding(
