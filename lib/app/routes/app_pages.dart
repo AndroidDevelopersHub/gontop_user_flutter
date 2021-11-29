@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import 'package:gontop_user/app/modules/add_deposit/bindings/add_deposit_binding.dart';
 import 'package:gontop_user/app/modules/add_deposit/views/add_deposit_view.dart';
+import 'package:gontop_user/app/modules/anouncement/bindings/anouncement_binding.dart';
+import 'package:gontop_user/app/modules/anouncement/views/anouncement_view.dart';
 import 'package:gontop_user/app/modules/category_details/bindings/category_details_binding.dart';
 import 'package:gontop_user/app/modules/category_details/views/category_details_view.dart';
 import 'package:gontop_user/app/modules/change_password/bindings/change_password_binding.dart';
@@ -20,22 +22,24 @@ import 'package:gontop_user/app/modules/order_details/bindings/order_details_bin
 import 'package:gontop_user/app/modules/order_details/views/order_details_view.dart';
 import 'package:gontop_user/app/modules/orders/bindings/orders_binding.dart';
 import 'package:gontop_user/app/modules/orders/views/orders_view.dart';
+import 'package:gontop_user/app/modules/otp_verification/bindings/otp_verification_binding.dart';
+import 'package:gontop_user/app/modules/otp_verification/views/otp_verification_view.dart';
 import 'package:gontop_user/app/modules/profile/bindings/profile_binding.dart';
 import 'package:gontop_user/app/modules/profile/views/profile_view.dart';
-import 'package:gontop_user/app/modules/registration/bindings/registration_binding.dart';
-import 'package:gontop_user/app/modules/registration/views/registration_view.dart';
 import 'package:gontop_user/app/modules/transaction/bindings/transaction_binding.dart';
 import 'package:gontop_user/app/modules/transaction/views/transaction_view.dart';
 import 'package:gontop_user/app/modules/transfer/bindings/transfer_binding.dart';
 import 'package:gontop_user/app/modules/transfer/views/transfer_view.dart';
+import 'package:gontop_user/app/modules/wallet/bindings/wallet_binding.dart';
+import 'package:gontop_user/app/modules/wallet/views/wallet_view.dart';
 
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  // static const INITIAL = Routes.HOME;
-  static const INITIAL = Routes.LOGIN;
+  static const INITIAL = Routes.HOME;
+  // static const INITIAL = Routes.LOGIN;
 
   static final routes = [
     GetPage(
@@ -47,11 +51,6 @@ class AppPages {
       name: _Paths.LOGIN,
       page: () => LoginView(),
       binding: LoginBinding(),
-    ),
-    GetPage(
-      name: _Paths.REGISTRATION,
-      page: () => RegistrationView(),
-      binding: RegistrationBinding(),
     ),
     GetPage(
       name: _Paths.HOME_SCREEN,
@@ -107,6 +106,21 @@ class AppPages {
       name: _Paths.HISTORY,
       page: () => HistoryView(),
       binding: HistoryBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTP_VERIFICATION,
+      page: () => OtpVerificationView(),
+      binding: OtpVerificationBinding(),
+    ),
+    GetPage(
+      name: _Paths.WALLET,
+      page: () => WalletView(),
+      binding: WalletBinding(),
+    ),
+    GetPage(
+      name: _Paths.ANOUNCEMENT,
+      page: () => AnouncementView(),
+      binding: AnouncementBinding(),
     ),
   ];
 }

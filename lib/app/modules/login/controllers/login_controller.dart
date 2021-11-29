@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gontop_user/app/routes/app_pages.dart';
 
 class LoginController extends GetxController with SingleGetTickerProviderMixin{
 
@@ -49,9 +50,14 @@ class LoginController extends GetxController with SingleGetTickerProviderMixin{
     update();
   }
 
-  onloginClick() {}
+  onloginClick() {
+    Get.offAllNamed(Routes.HOME);
 
-  onforgotPasswordClick() {}
+  }
+
+  onforgotPasswordClick() {
+    Get.toNamed(Routes.OTP_VERIFICATION);
+  }
 
 
 }

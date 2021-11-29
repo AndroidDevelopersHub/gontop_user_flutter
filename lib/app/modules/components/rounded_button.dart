@@ -10,6 +10,7 @@ class CRoundedButton extends StatelessWidget {
   String? text;
   double? radius;
 
+
   CRoundedButton({
     required this.onClick,
     required this.text,
@@ -17,13 +18,14 @@ class CRoundedButton extends StatelessWidget {
     this.width,
     this.backgroundColor,
     this.radius,
+
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: height ?? Dimens.textFieldNormal,
-      width: width ?? 300,
+      width: width ?? 320,
       child: ElevatedButton(
           child: Text(text ?? "Button", style: TextStyle(fontSize: Dimens.title)),
           style: ButtonStyle(

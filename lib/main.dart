@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: createMaterialColor(CustomColors.KPrimaryRedColor),
-        textTheme: GoogleFonts.latoTextTheme(),
+        textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       title: "Swap",
       initialRoute: AppPages.INITIAL,

@@ -1,20 +1,24 @@
 import 'package:get/get.dart';
+import 'package:gontop_user/app/modules/anouncement/views/anouncement_view.dart';
+import 'package:gontop_user/app/modules/home_screen/views/home_screen_view.dart';
+import 'package:gontop_user/app/modules/orders/views/orders_view.dart';
+import 'package:gontop_user/app/modules/profile/views/profile_view.dart';
+import 'package:gontop_user/app/modules/wallet/views/wallet_view.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  int selectedIndex = 0;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  var sceenList = [
+    HomeScreenView(),
+    OrdersView(),
+    WalletView(),
+    AnouncementView(),
+    ProfileView(),
+  ];
+
+  onTabChange(int index) {
+    selectedIndex = index;
+    update();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {}
-  void increment() => count.value++;
 }

@@ -23,10 +23,11 @@ class Dimens {
   static const titleMinMid = 12.0;
   static const titleMid = 14.0;
   static const title = 16.0;
-  static const titleLarge = 20.0;
-  static const titleLargeExtra = 24.0;
-  static const titleLargeDoubleExtra = 28.0;
-  static const titleLargeTrippleExtra = 32.0;
+  static const titleLarge = 18.0;
+  static const titleLargeExtra = 22.0;
+  static const titleLargeDoubleExtra = 26.0;
+  static const titleLargeTrippleExtra = 30.0;
+  static const titleLargeTripplexx = 34.0;
 
 
   // Text Size
@@ -51,6 +52,9 @@ class Dimens {
   static const textFieldSmall = 38.0;
   static const textFieldNormal = 45.0;
   static const textFieldMid = 50.0;
+
+
+  static const sectionNormal = 50.0;
 
 
 

@@ -35,13 +35,18 @@ class LoginView extends GetView<LoginController> {
                   child: Column(
                     children: [
                       SizedBox(
-                        height: 250,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Image.asset(
-                            'assets/images/logo.png',
-                          ),
+                        height: 40,
+                      ),
+                      SizedBox(
+                        height: 120,
+                        child: Image.asset(
+                          'assets/images/logo.png',
+                          height: 110,
+                          width: 110,
                         ),
+                      ),
+                      SizedBox(
+                        height: 15,
                       ),
                       TabBar(
                         unselectedLabelColor: Colors.grey,
@@ -62,7 +67,7 @@ class LoginView extends GetView<LoginController> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+
                 Expanded(
                   child: Container(
                     color: Colors.white,
@@ -70,62 +75,77 @@ class LoginView extends GetView<LoginController> {
                       children: [
                         Column(
                           children: [
-                            SizedBox(
-                              height: 15,
-                            ),
-                            CTextField(
-                              controller: controller.emailController,
-                              hintText: 'Email or Phone Number',
-                              textInputType: TextInputType.text,
-                              prefixIcon: Icon(Icons.person),
-                            ),
-                            CTextField(
-                              controller: controller.passwordController,
-                              obscureText: true,
-                              hintText: 'Password',
-                              textInputType: TextInputType.text,
-                              prefixIcon: Icon(Icons.lock),
-                            ),
-                            SizedBox(height: 15),
-                            CRoundedButton(
-                              text: 'LOG IN',
-                              onClick: () => controller.onloginClick(),
-                            ),
-                            SizedBox(height: 10),
-                            SizedBox(
-                              width: 300,
-                              child: InkWell(
-                                onTap: () => controller.onforgotPasswordClick(),
-                                child: Text(
-                                  "Forgot Password?",
-                                  textAlign: TextAlign.right,
-                                  style: GoogleFonts.lato(
-                                      fontSize: Dimens.titleMid,
-                                      color: CustomColors.KPrimaryRedColor,
-                                      fontWeight: FontWeight.w600),
+
+                            Expanded(
+                              child: Container(
+                                width: 320,
+                                child: ListView(
+                                  shrinkWrap: true,
+                                  physics: BouncingScrollPhysics(),
+                                  children: [
+
+                                    SizedBox(height: 10),
+
+                                    CTextField(
+                                      controller: controller.emailController,
+                                      hintText: 'Email or Phone Number',
+                                      textInputType: TextInputType.text,
+                                      prefixIcon: Icon(Icons.person),
+                                    ),
+                                    CTextField(
+                                      controller: controller.passwordController,
+                                      obscureText: true,
+                                      hintText: 'Password',
+                                      textInputType: TextInputType.text,
+                                      prefixIcon: Icon(Icons.lock),
+                                    ),
+                                    SizedBox(height: 15),
+                                    CRoundedButton(
+                                      text: 'LOG IN',
+                                      onClick: () => controller.onloginClick(),
+                                    ),
+                                    SizedBox(height: 10),
+                                    SizedBox(
+                                      width: 300,
+                                      child: InkWell(
+                                        onTap: () =>
+                                            controller.onforgotPasswordClick(),
+                                        child: Text(
+                                          "Forgot Password?",
+                                          textAlign: TextAlign.right,
+                                          style: GoogleFonts.poppins(
+                                              fontSize: Dimens.titleMid,
+                                              color:
+                                                  CustomColors.KPrimaryRedColor,
+                                              fontWeight: FontWeight.w600),
+                                        ),
+                                      ),
+                                    ),
+
+                                    SizedBox(height: 20),
+                                  ],
                                 ),
                               ),
                             ),
-
-                            Spacer(),
                             Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 50),
+                              padding: const EdgeInsets.only(bottom: 20),
                               child: InkWell(
-                                onTap: ()=> controller.updateIndex(1),
+                                onTap: () => controller.updateIndex(1),
                                 child: Text.rich(
                                   TextSpan(
                                     children: [
                                       TextSpan(
                                           text: "Don't have account? ",
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.poppins(
                                             fontSize: Dimens.titleMid,
                                             color: CustomColors.KLiteBlackColor,
                                           )),
                                       TextSpan(
                                           text: ' Create new now!',
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.poppins(
                                             fontSize: Dimens.titleMid,
-                                            color: CustomColors.KPrimaryRedColor,
+                                            color:
+                                                CustomColors.KPrimaryRedColor,
                                             fontWeight: FontWeight.w700,
                                           )),
                                     ],
@@ -138,69 +158,77 @@ class LoginView extends GetView<LoginController> {
                         ),
                         Column(
                           children: [
-                            SizedBox(
-                              height: 15,
-                            ),
+                            Expanded(
+                              child: Container(
+                                width: 320,
+                                child: ListView(
+                                  shrinkWrap: true,
+                                  physics: BouncingScrollPhysics(),
+                                  children: [
+                                    CTextField(
+                                      controller: controller.usernameController,
+                                      hintText: 'User Name',
+                                      textInputType: TextInputType.text,
+                                      prefixIcon: Icon(Icons.person),
+                                    ),
+                                    CTextField(
+                                      controller: controller.emailController,
+                                      hintText: 'Email Address',
+                                      textInputType: TextInputType.emailAddress,
+                                      prefixIcon: Icon(Icons.mail),
+                                    ),
+                                    CTextField(
+                                      controller: controller.numberController,
+                                      hintText: 'Phone Number',
+                                      textInputType: TextInputType.number,
+                                      prefixIcon: Icon(Icons.call),
+                                    ),
+                                    CTextField(
+                                      controller: controller.passwordController,
+                                      obscureText: true,
+                                      hintText: 'Password',
+                                      textInputType: TextInputType.text,
+                                      prefixIcon: Icon(Icons.lock),
+                                    ),
+                                    CTextField(
+                                      controller:
+                                          controller.confirmPasswordController,
+                                      obscureText: true,
+                                      hintText: 'Confirm Password',
+                                      textInputType: TextInputType.text,
+                                      prefixIcon: Icon(Icons.lock),
+                                    ),
+                                    SizedBox(height: 15),
+                                    CRoundedButton(
+                                      text: 'SIGN UP',
+                                      onClick: () => controller.onloginClick(),
+                                    ),
 
-                            CTextField(
-                              controller: controller.usernameController,
-                              hintText: 'User Name',
-                              textInputType: TextInputType.text,
-                              prefixIcon: Icon(Icons.person),
+                                    SizedBox(height: 20),
+                                  ],
+                                ),
+                              ),
                             ),
-                            CTextField(
-                              controller: controller.emailController,
-                              hintText: 'Email Address',
-                              textInputType: TextInputType.emailAddress,
-                              prefixIcon: Icon(Icons.mail),
-                            ),
-                            CTextField(
-                              controller: controller.numberController,
-                              hintText: 'Phone Number',
-                              textInputType: TextInputType.number,
-                              prefixIcon: Icon(Icons.call),
-                            ),
-                            CTextField(
-                              controller: controller.passwordController,
-                              obscureText: true,
-                              hintText: 'Password',
-                              textInputType: TextInputType.text,
-                              prefixIcon: Icon(Icons.lock),
-                            ),
-                            CTextField(
-                              controller: controller.confirmPasswordController,
-                              obscureText: true,
-                              hintText: 'Confirm Password',
-                              textInputType: TextInputType.text,
-                              prefixIcon: Icon(Icons.lock),
-                            ),
-                            SizedBox(height: 15),
-                            CRoundedButton(
-                              text: 'SIGN UP',
-                              onClick: () => controller.onloginClick(),
-                            ),
-                            SizedBox(height: 10),
-
-                            Spacer(),
 
                             Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 50),
+                              padding: const EdgeInsets.only(bottom: 20),
                               child: InkWell(
-                                onTap: ()=> controller.updateIndex(0),
+                                onTap: () => controller.updateIndex(0),
                                 child: Text.rich(
                                   TextSpan(
                                     children: [
                                       TextSpan(
                                           text: "Already have an account? ",
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.poppins(
                                             fontSize: Dimens.titleMid,
                                             color: CustomColors.KLiteBlackColor,
                                           )),
                                       TextSpan(
                                           text: ' Login now!',
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.poppins(
                                             fontSize: Dimens.titleMid,
-                                            color: CustomColors.KPrimaryRedColor,
+                                            color:
+                                                CustomColors.KPrimaryRedColor,
                                             fontWeight: FontWeight.w700,
                                           )),
                                     ],
@@ -209,7 +237,6 @@ class LoginView extends GetView<LoginController> {
                                 ),
                               ),
                             ),
-
                           ],
                         ),
                       ],

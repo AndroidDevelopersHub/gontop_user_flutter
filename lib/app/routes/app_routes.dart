@@ -18,6 +18,9 @@ abstract class Routes {
   static const TRANSFER = _Paths.TRANSFER;
   static const TRANSACTION = _Paths.TRANSACTION;
   static const HISTORY = _Paths.HISTORY;
+  static const OTP_VERIFICATION = _Paths.OTP_VERIFICATION;
+  static const WALLET = _Paths.WALLET;
+  static const ANOUNCEMENT = _Paths.ANOUNCEMENT;
 }
 
 abstract class _Paths {
@@ -35,4 +38,7 @@ abstract class _Paths {
   static const TRANSFER = '/transfer';
   static const TRANSACTION = '/transaction';
   static const HISTORY = '/history';
+  static const OTP_VERIFICATION = '/otp-verification';
+  static const WALLET = '/wallet';
+  static const ANOUNCEMENT = '/anouncement';
 }
