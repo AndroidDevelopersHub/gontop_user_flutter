@@ -33,9 +33,7 @@ class HomeScreenController extends GetxController with SingleGetTickerProviderMi
   @override
   void onInit() {
     tabController = TabController(length: 4, vsync: this);
-
     callApi();
-
     super.onInit();
 
 
@@ -67,6 +65,11 @@ class HomeScreenController extends GetxController with SingleGetTickerProviderMi
 
     final result = homeRepository.getAll();
     print(result);
+  }
+
+  onItemClick() {
+
+
   }
   
 }

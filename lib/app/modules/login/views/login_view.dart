@@ -72,6 +72,7 @@ class LoginView extends GetView<LoginController> {
                   child: Container(
                     color: Colors.white,
                     child: TabBarView(
+                      controller: controller.tabController,
                       children: [
                         Column(
                           children: [
@@ -240,7 +241,7 @@ class LoginView extends GetView<LoginController> {
                           ],
                         ),
                       ],
-                      controller: controller.tabController,
+
                     ),
                   ),
                 ),

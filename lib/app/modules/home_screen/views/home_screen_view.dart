@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:gontop_user/app/modules/components/elevated_textfield.dart';
+import 'package:gontop_user/app/modules/components/item_game.dart';
 import 'package:gontop_user/app/utils/helper/constants.dart';
+import 'package:gontop_user/app/utils/helper/utility.dart';
 import 'package:gontop_user/app/utils/themes/colors.dart';
 import 'package:gontop_user/app/utils/themes/dimens.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -88,6 +90,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                 ),
                 SizedBox(height: 15),
                 Container(
+                  width: getMaxWidth(context),
                   margin: EdgeInsets.only(left: 20),
                   decoration: BoxDecoration(
                       color: Colors.grey.shade200,
@@ -95,9 +98,9 @@ class HomeScreenView extends GetView<HomeScreenController> {
                         topLeft: Radius.circular(Dimens.radiusMid),
                         bottomLeft: Radius.circular(Dimens.radiusMid),
                       )),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Center(
                     child: TabBar(
+                      isScrollable: true,
                       unselectedLabelColor: CustomColors.KLiteBlackColor,
                       labelColor: Colors.red,
                       controller: controller.tabController,
@@ -122,15 +125,47 @@ class HomeScreenView extends GetView<HomeScreenController> {
                           text: 'Games',
                         ),
                         Tab(
-                          text: 'Gift Card',
+                          text: 'Gifts Card',
                         ),
                         Tab(
-                          text: 'Signup',
+                          text: 'Flash Sale',
                         ),
                       ],
                     ),
                   ),
-                )
+                ),
+                Expanded(
+                    child: TabBarView(
+                  controller: controller.tabController,
+                  children: [
+                    GridView.builder(
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3,
+                                childAspectRatio: .8),
+                        itemCount: 15,
+                        itemBuilder: (BuildContext context, int index) =>
+                            GameItem(
+                              onItemClick: () => controller.onItemClick(),
+                            )),
+                    GridView.builder(
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
+                        gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3,
+                            childAspectRatio: .8),
+                        itemCount: 15,
+                        itemBuilder: (BuildContext context, int index) =>
+                            GameItem(
+                              onItemClick: () => controller.onItemClick(),
+                            )),
+                    Text("hh"),
+                    Text("hh"),
+                  ],
+                ))
               ],
             )));
   }
