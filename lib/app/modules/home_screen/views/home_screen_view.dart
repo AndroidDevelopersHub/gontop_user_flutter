@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gontop_user/app/modules/components/elevated_textfield.dart';
 import 'package:gontop_user/app/modules/components/item_game.dart';
+import 'package:gontop_user/app/modules/components/item_giftcard.dart';
 import 'package:gontop_user/app/utils/helper/constants.dart';
 import 'package:gontop_user/app/utils/helper/utility.dart';
 import 'package:gontop_user/app/utils/themes/colors.dart';
@@ -134,36 +135,70 @@ class HomeScreenView extends GetView<HomeScreenController> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 Expanded(
                     child: TabBarView(
                   controller: controller.tabController,
                   children: [
+                    //all
                     GridView.builder(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                         shrinkWrap: true,
                         physics: const ClampingScrollPhysics(),
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 3,
+                                mainAxisSpacing: 5,
+                                crossAxisSpacing: 5,
                                 childAspectRatio: .8),
                         itemCount: 15,
                         itemBuilder: (BuildContext context, int index) =>
                             GameItem(
                               onItemClick: () => controller.onItemClick(),
+                              index: index,
                             )),
+
+                    //games
                     GridView.builder(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                         shrinkWrap: true,
                         physics: const ClampingScrollPhysics(),
                         gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 3,
-                            childAspectRatio: .8),
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3,
+                                mainAxisSpacing: 5,
+                                crossAxisSpacing: 5,
+                                childAspectRatio: .8),
                         itemCount: 15,
                         itemBuilder: (BuildContext context, int index) =>
                             GameItem(
                               onItemClick: () => controller.onItemClick(),
+                              index: index,
                             )),
-                    Text("hh"),
-                    Text("hh"),
+
+                    //Gift Card
+                    GridView.builder(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3,
+                                mainAxisSpacing: 5,
+                                crossAxisSpacing: 5,
+                                childAspectRatio: .8),
+                        itemCount: 15,
+                        itemBuilder: (BuildContext context, int index) =>
+                            GiftCardItem(
+                              onItemClick: () => controller.onItemClick(),
+                              index: index,
+                            )),
+                    Center(child: Text("Flash Sale")),
                   ],
                 ))
               ],

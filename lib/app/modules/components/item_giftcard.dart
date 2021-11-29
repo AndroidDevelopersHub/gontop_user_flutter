@@ -6,11 +6,11 @@ import 'package:gontop_user/app/utils/themes/dimens.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:math' as math;
 
-class GameItem extends StatelessWidget {
+class GiftCardItem extends StatelessWidget {
   VoidCallback? onItemClick;
 
   int? index;
-  GameItem({required this.onItemClick, required this.index});
+  GiftCardItem({required this.onItemClick, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class GameItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(Dimens.radiusMid),
             child: Image.network(
-              gameList[index! % 10],
+              cardList[index! % 4],
               height: 110,
               width: 110,
               fit: BoxFit.fitHeight,

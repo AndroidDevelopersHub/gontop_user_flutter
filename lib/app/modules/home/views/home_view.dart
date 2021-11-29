@@ -16,8 +16,8 @@ class HomeView extends GetView<HomeController> {
             currentIndex: controller.selectedIndex,
             selectedItemColor: Colors.red,
             unselectedItemColor: Colors.grey,
-            showUnselectedLabels: false,
-            showSelectedLabels: false,
+            showUnselectedLabels: true,
+            showSelectedLabels: true,
             onTap: (index) => controller.onTabChange(index),
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
