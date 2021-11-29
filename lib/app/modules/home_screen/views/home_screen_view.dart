@@ -157,7 +157,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                         itemCount: 15,
                         itemBuilder: (BuildContext context, int index) =>
                             GameItem(
-                              onItemClick: () => controller.onItemClick(),
+                              onItemClick: (imageUrl) => controller.onItemClick(imageUrl),
                               index: index,
                             )),
 
@@ -176,7 +176,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                         itemCount: 15,
                         itemBuilder: (BuildContext context, int index) =>
                             GameItem(
-                              onItemClick: () => controller.onItemClick(),
+                              onItemClick: (imageUrl) => controller.onItemClick(imageUrl),
                               index: index,
                             )),
 
@@ -195,7 +195,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
                         itemCount: 15,
                         itemBuilder: (BuildContext context, int index) =>
                             GiftCardItem(
-                              onItemClick: () => controller.onItemClick(),
+                              onItemClick: (imageUrl) => controller.onItemClick(imageUrl),
                               index: index,
                             )),
                     Center(child: Text("Flash Sale")),

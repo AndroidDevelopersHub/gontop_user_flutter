@@ -24,6 +24,8 @@ import 'package:gontop_user/app/modules/orders/bindings/orders_binding.dart';
 import 'package:gontop_user/app/modules/orders/views/orders_view.dart';
 import 'package:gontop_user/app/modules/otp_verification/bindings/otp_verification_binding.dart';
 import 'package:gontop_user/app/modules/otp_verification/views/otp_verification_view.dart';
+import 'package:gontop_user/app/modules/product_list/bindings/product_list_binding.dart';
+import 'package:gontop_user/app/modules/product_list/views/product_list_view.dart';
 import 'package:gontop_user/app/modules/profile/bindings/profile_binding.dart';
 import 'package:gontop_user/app/modules/profile/views/profile_view.dart';
 import 'package:gontop_user/app/modules/transaction/bindings/transaction_binding.dart';
@@ -121,6 +123,11 @@ class AppPages {
       name: _Paths.ANOUNCEMENT,
       page: () => AnouncementView(),
       binding: AnouncementBinding(),
+    ),
+    GetPage(
+      name: _Paths.PRODUCT_LIST,
+      page: () => ProductListView(),
+      binding: ProductListBinding(),
     ),
   ];
 }

@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'dart:math' as math;
 
 class GameItem extends StatelessWidget {
-  VoidCallback? onItemClick;
+  Function(String) onItemClick;
 
   int? index;
   GameItem({required this.onItemClick, required this.index});
@@ -15,7 +15,7 @@ class GameItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: onItemClick,
+      onTap:()=> onItemClick( gameList[index! % 10]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

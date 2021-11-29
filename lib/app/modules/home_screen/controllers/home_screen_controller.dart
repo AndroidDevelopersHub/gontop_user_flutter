@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gontop_user/app/api/repository/home_repository.dart';
+import 'package:gontop_user/app/routes/app_pages.dart';
 
 class HomeScreenController extends GetxController with SingleGetTickerProviderMixin{
 
@@ -67,8 +68,9 @@ class HomeScreenController extends GetxController with SingleGetTickerProviderMi
     print(result);
   }
 
-  onItemClick() {
+  onItemClick(String imageUrl) {
 
+    Get.toNamed(Routes.PRODUCT_LIST, arguments: {'image': imageUrl});
 
   }
   

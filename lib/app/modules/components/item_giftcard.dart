@@ -7,15 +7,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'dart:math' as math;
 
 class GiftCardItem extends StatelessWidget {
-  VoidCallback? onItemClick;
+  Function(String) onItemClick;
 
   int? index;
   GiftCardItem({required this.onItemClick, required this.index});
 
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: onItemClick,
+      onTap: ()=> onItemClick(cardList[index! % 4]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

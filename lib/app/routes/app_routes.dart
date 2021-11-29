@@ -21,6 +21,7 @@ abstract class Routes {
   static const OTP_VERIFICATION = _Paths.OTP_VERIFICATION;
   static const WALLET = _Paths.WALLET;
   static const ANOUNCEMENT = _Paths.ANOUNCEMENT;
+  static const PRODUCT_LIST = _Paths.PRODUCT_LIST;
 }
 
 abstract class _Paths {
@@ -41,4 +42,5 @@ abstract class _Paths {
   static const OTP_VERIFICATION = '/otp-verification';
   static const WALLET = '/wallet';
   static const ANOUNCEMENT = '/anouncement';
+  static const PRODUCT_LIST = '/product-list';
 }
