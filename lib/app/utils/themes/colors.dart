@@ -16,7 +16,10 @@ class CustomColors {
   static const Color KBlackColor = Color(0xFF455A64);
   static const Color KLiteBlackColor = Color(0xFF707070);
   static const Color KDarkBlackColor = Color(0xFF2E353A);
-
+  static const Color KUnselectedColor = Color(0xFFF4FDFF);
+  static const Color KDisableColor = Color(0xFFF4F7F8);
+  static const Color KSelectedColor = Color(0xFFE87C28);
+  static const Color KAzureColor = Color(0xFFF4FDFF);
 
 
   static const Color KAntiFlashBackground = Color(0xFFF0F0F0);
@@ -29,7 +32,10 @@ class CustomColors {
   static const Color KBuyBackground = Color(0xFFC0B9FE);
   static const Color KHotDealsBackground = Color(0xFFFFF5EC);
   static const Color KAlgaeGreenBackGround = Color(0xFF92E3A9);
+  static const Color KGreenTrans = Color(0xFFC7F1D3);
+  static const Color KGreenBackGround = Color(0xFF1DBF73);
   static const Color KWhite = Color(0xFFFFFFFF);
+  static const Color KLiteWhite = Color(0xFFFAFAFA);
   static const Color KSkyBlueColor = Color(0xFFF4FDFF);
 
 

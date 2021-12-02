@@ -7,6 +7,7 @@ class Dimens {
   static const basePadding = 12.0;
   static const basePaddingNormal = 15.0;
   static const basePaddingLarge = 20.0;
+  static const basePaddingLargeextra = 26.0;
 
 
   //Radius

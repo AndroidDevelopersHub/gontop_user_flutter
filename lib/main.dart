@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: createMaterialColor(CustomColors.KPrimaryRedColor),
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      title: "Swap",
+      title: "Gontop",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       defaultTransition: Transition.rightToLeft,
