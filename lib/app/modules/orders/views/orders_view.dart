@@ -71,7 +71,7 @@ class OrdersView extends GetView<OrdersController> {
                   topLeft: Radius.circular(Dimens.radiusLarge),
                   topRight: Radius.circular(Dimens.radiusLarge))),
           child: ListView.builder(
-              padding: EdgeInsets.only(top: Dimens.basePaddingLarge),
+              padding: EdgeInsets.only(top: Dimens.basePadding),
               itemCount: 15,
               shrinkWrap: true,
               physics: const BouncingScrollPhysics(),
