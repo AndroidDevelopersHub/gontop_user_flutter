@@ -8,16 +8,28 @@ class TransactionView extends GetView<TransactionController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('TransactionView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'TransactionView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: Stack(
+        children: [
+          Container(
+            height: 300,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    stops: [
+                      0.1,
+                      0.7
+                    ],
+                    colors: [
+                      Colors.red.withOpacity(.3),
+                      Colors.white
+                    ])),
+
+          )
+
+        ],
+      )
     );
   }
 }
